@@ -1,4 +1,4 @@
-
+🐳 Docker Ready
 TENSORFLOW DOES NOT WORK WITH PYTHON 3.14. MAKE SURE YOU HAVE 3.12 INSTALLED IN YOUR PATH TO RUN IT.
 
 # Smart Ambulance - Anomaly Detection & Risk Scoring System
@@ -49,7 +49,41 @@ smart-ambulance/
 
 ##  Quick Start
 
-### 1. Installation
+🐳 Run with Docker (Recommended)
+
+This project is fully Dockerized for easy and reproducible setup.
+
+Prerequisites
+
+Install Docker Desktop: https://www.docker.com/products/docker-desktop/
+
+Run the API (one command)
+docker compose up
+
+Build image manually (first time or after changes)
+docker compose build
+docker compose up
+
+API Endpoints
+
+Health check:
+
+http://localhost:8000/health
+
+
+Interactive API docs (Swagger UI):
+
+http://localhost:8000/docs
+
+Notes
+
+Models are mounted from ./models
+
+Data is mounted from ./data
+
+No local Python or TensorFlow install required
+
+### Alternative(local) 1. Installation
 
 ```bash
 # Clone repository
