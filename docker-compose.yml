@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  smart-ambulance-api:
+    build: .
+    container_name: smart-ambulance-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
